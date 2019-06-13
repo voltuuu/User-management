@@ -1,0 +1,25 @@
+.list-holder {
+  margin-bottom: 20px;
+}
+
+.list-holder .delete-users {
+  background: #E8E8E8;
+  color: #000;
+  padding: 5px 9px;
+  border: 1px solid #E8E8E8;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.list-holder .delete-users:focus, .list-holder .delete-users:visited {
+  outline: none;
+}
+
+.list-holder .delete-users:hover {
+  background: #00cc99;
+  border-color: #00cc99;
+  color: #fff;
+}
+/*# sourceMappingURL=ListMenu.css.map */

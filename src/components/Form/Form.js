@@ -14,8 +14,8 @@ class Form extends React.Component {
             validatedFields: [],
             regex: {
                 nickname: /[A-Za-z]+/,
-                email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                ipAddress: /\b(?:\d{1,3}\.){3}\d{1,3}\b/
+                email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                ipAddress: /^(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))\.(\d|[1-9]\d|1\d\d|2([0-4]\d|5[0-5]))$/
             }
         }
     }
@@ -45,6 +45,7 @@ class Form extends React.Component {
     runError(event) {
         document.querySelector('#error-'+event.target.id).style.display = 'block';
         document.querySelector('#error-'+event.target.id).classList.add('fadeIn');
+        event.target.classList.remove('input-success');
         event.target.classList.add('input-error');
         this.setState({
             enableBtn: false
@@ -54,6 +55,7 @@ class Form extends React.Component {
     runSuccess(event) {
         document.querySelector('#error-'+event.target.id).style.display = 'none';
         event.target.classList.remove('input-error');
+        event.target.classList.add('input-success');
         this.addToValidated(event.target.id);
         this.checkValidated();
     }
@@ -66,7 +68,8 @@ class Form extends React.Component {
         }
     }
 
-    passObj() {
+    passUser(e) {
+        e.preventDefault();
         if (this.state.formValid) {
             this.props.callback({
                 nickname: this.state.nickname,
@@ -78,9 +81,9 @@ class Form extends React.Component {
 
     render() {
         return (
-            <div className="form">
+            <div className="form-holder">
                 <h2 className="form-header">Crypto users</h2>
-                <div className="form-fields">
+                <form onSubmit={this.passUser.bind(this)} className="form">
                     <div className="form-group">
                         <input
                             type="text"
@@ -119,8 +122,8 @@ class Form extends React.Component {
                         <label className="form-label" htmlFor="ipAddress">IP address</label>
                         <div className="form-error" id="error-ipAddress">Wrong IP address format</div>
                     </div>
-                </div>
-                <button className="form-btn" onClick={this.passObj.bind(this)} disabled={!this.state.enableBtn}>Add user</button>
+                    <button type="submit" className="form-btn" disabled={!this.state.enableBtn}>Add user</button>
+                </form>
             </div>
         );
     }

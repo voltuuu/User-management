@@ -23,17 +23,17 @@
           animation-duration: 0.5s;
 }
 
-.form .form-header {
+.form-holder .form-header {
   margin: 0 0 30px;
   font-size: 30px;
 }
 
-.form .form-fields .form-group {
+.form-holder .form .form-group {
   position: relative;
   margin-bottom: 30px;
 }
 
-.form .form-fields .form-group .form-label {
+.form-holder .form .form-group .form-label {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@
   opacity: 0.5;
 }
 
-.form .form-fields .form-group .form-input {
+.form-holder .form .form-group .form-input {
   max-width: 300px;
   width: 100%;
   border-top: 0;
@@ -56,19 +56,19 @@
   transition: all 0.3s;
 }
 
-.form .form-fields .form-group .form-input:focus, .form .form-fields .form-group .form-input:valid {
+.form-holder .form .form-group .form-input:focus, .form-holder .form .form-group .form-input:valid {
   outline: none;
   border-color: #B0B0B0;
 }
 
-.form .form-fields .form-group .form-input:focus + .form-label, .form .form-fields .form-group .form-input:valid + .form-label {
+.form-holder .form .form-group .form-input:focus + .form-label, .form-holder .form .form-group .form-input:valid + .form-label {
   font-size: 75%;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
   opacity: 1;
 }
 
-.form .form-fields .form-group .form-error {
+.form-holder .form .form-group .form-error {
   display: none;
   top: 0;
   left: 315px;
@@ -79,13 +79,19 @@
   color: #ff3333;
 }
 
-.form .form-fields .form-group .input-error {
+.form-holder .form .form-group .input-error {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border-color: #ff3333 !important;
 }
 
-.form .form-btn {
+.form-holder .form .form-group .input-success {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-color: #00cc99 !important;
+}
+
+.form-holder .form .form-btn {
   padding: 10px 20px;
   border-radius: 35px;
   background: #00cc99;
@@ -97,17 +103,17 @@
   transition: all 0.5s;
 }
 
-.form .form-btn:visited, .form .form-btn:focus {
+.form-holder .form .form-btn:visited, .form-holder .form .form-btn:focus {
   outline: none;
 }
 
-.form .form-btn:hover {
+.form-holder .form .form-btn:hover {
   color: #00cc99;
   background: #fff;
   border-color: #00cc99;
 }
 
-.form .form-btn:disabled {
+.form-holder .form .form-btn:disabled {
   border: 1px solid #E8E8E8;
   background-color: #E8E8E8;
   color: #B0B0B0;

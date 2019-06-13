@@ -7,12 +7,12 @@
     animation-duration: 0.5s;
 }
 
-.form {
+.form-holder {
     .form-header {
         margin: 0 0 30px;
         font-size: 30px;
     }
-    .form-fields {
+    .form {
         .form-group {
             position: relative;
             margin-bottom: 30px;
@@ -58,30 +58,34 @@
                 transition: all 0.3s;
                 border-color: #ff3333!important;
             }
+            .input-success {
+                transition: all 0.3s;
+                border-color: #00cc99!important;
+            }
         }
-    }
-    .form-btn {
-        padding: 10px 20px;
-        border-radius: 35px;
-        background: #00cc99;
-        border: 1.5px solid #00cc99;
-        color: #fff;
-        font-size: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-        &:visited, &:focus {
-            outline: none;
-        }
-        &:hover {
-            color: #00cc99;
-            background: #fff;
-            border-color: #00cc99;
-        }
-        &:disabled{
-          border: 1px solid #E8E8E8;
-          background-color: #E8E8E8;
-          color: #B0B0B0;
-          cursor: not-allowed;
+        .form-btn {
+            padding: 10px 20px;
+            border-radius: 35px;
+            background: #00cc99;
+            border: 1.5px solid #00cc99;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:visited, &:focus {
+                outline: none;
+            }
+            &:hover {
+                color: #00cc99;
+                background: #fff;
+                border-color: #00cc99;
+            }
+            &:disabled{
+              border: 1px solid #E8E8E8;
+              background-color: #E8E8E8;
+              color: #B0B0B0;
+              cursor: not-allowed;
+            }
         }
     }
 }
