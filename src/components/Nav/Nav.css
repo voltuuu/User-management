@@ -1,0 +1,39 @@
+.menu .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #00cc99;
+}
+
+.menu .menu-links a {
+  text-decoration: none;
+}
+
+.menu .menu-links a .menu-link {
+  padding: 20px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.menu .menu-links a .menu-link:hover {
+  background: #fff;
+  color: #00cc99;
+}
+
+.menu .menu-links a .active {
+  background: #fff;
+  color: #00cc99;
+}
+/*# sourceMappingURL=Nav.css.map */

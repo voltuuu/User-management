@@ -1,0 +1,65 @@
+.list {
+  padding: 20px;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+}
+
+.list .list-table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.list .list-table .list-head {
+  background: #E8E8E8;
+}
+
+.list .list-table .list-head tr th {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.list .list-table .list-head tr th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.list .list-table .list-head tr th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.list .list-table .list-body tr td {
+  padding: 10px 20px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.list .list-table .list-body tr td .delete {
+  background: #E8E8E8;
+  color: #000;
+  border-radius: 100%;
+  padding: 5px 9px;
+  border: 1px solid #E8E8E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.list .list-table .list-body tr td .delete:focus, .list .list-table .list-body tr td .delete:visited {
+  outline: none;
+}
+
+.list .list-table .list-body tr td .delete:hover {
+  background: #00cc99;
+  border-color: #00cc99;
+  color: #fff;
+}
+/*# sourceMappingURL=List.css.map */

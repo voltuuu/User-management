@@ -1,0 +1,116 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.form .form-header {
+  margin: 0 0 30px;
+  font-size: 30px;
+}
+
+.form .form-fields .form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form .form-fields .form-group .form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 7px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  opacity: 0.5;
+}
+
+.form .form-fields .form-group .form-input {
+  max-width: 300px;
+  width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 20px;
+  padding-bottom: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.form .form-fields .form-group .form-input:focus, .form .form-fields .form-group .form-input:valid {
+  outline: none;
+  border-color: #B0B0B0;
+}
+
+.form .form-fields .form-group .form-input:focus + .form-label, .form .form-fields .form-group .form-input:valid + .form-label {
+  font-size: 75%;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  opacity: 1;
+}
+
+.form .form-fields .form-group .form-error {
+  display: none;
+  top: 0;
+  left: 315px;
+  position: absolute;
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffb3b3;
+  color: #ff3333;
+}
+
+.form .form-fields .form-group .input-error {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-color: #ff3333 !important;
+}
+
+.form .form-btn {
+  padding: 10px 20px;
+  border-radius: 35px;
+  background: #00cc99;
+  border: 1.5px solid #00cc99;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form .form-btn:visited, .form .form-btn:focus {
+  outline: none;
+}
+
+.form .form-btn:hover {
+  color: #00cc99;
+  background: #fff;
+  border-color: #00cc99;
+}
+
+.form .form-btn:disabled {
+  border: 1px solid #E8E8E8;
+  background-color: #E8E8E8;
+  color: #B0B0B0;
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=Form.css.map */
