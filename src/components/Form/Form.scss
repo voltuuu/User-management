@@ -16,7 +16,6 @@
         .form-group {
             position: relative;
             margin-bottom: 30px;
-            max-width: 300px;
             width: 100%;
             .form-label {
                 position: absolute;
@@ -27,6 +26,7 @@
                 opacity: 0.5;
             }
             .form-input {
+                max-width: 300px;
                 width: 100%;
                 border-top: 0;
                 border-left: 0;
@@ -102,6 +102,7 @@
             .form-group {
                 margin: auto;
                 padding-bottom: 60px;
+                max-width: 300px;
                 .form-error {
                     top: auto;
                     bottom: 25px;

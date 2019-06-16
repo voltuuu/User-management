@@ -13,12 +13,7 @@ class Dashboard extends React.Component {
         this.state = {
             id: 1,
             user: '',
-            list: [
-                {id: 1, nickname: 'a', email: 'a@gmail.com', ipAddress: '123.123.123.123'},
-                {id: 2, nickname: 'b', email: 'b@gmail.com', ipAddress: '213.213.213.213'},
-                {id: 3, nickname: 'c', email: 'c@gmail.com', ipAddress: '321.321.321.321'},
-                {id: 4, nickname: 'test', email: 'test@gmail.com', ipAddress: '123.123.123.123'}
-            ]
+            list: []
         }
     }
 

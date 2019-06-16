@@ -29,6 +29,7 @@ class ListMenu extends React.Component {
                 <button className="delete-users" onClick={this.deleteUsers.bind(this)}>Delete All Users</button>
                 <select value={this.state.select} className="sort-users" onChange={this.sortUsers.bind(this)}>
                     <option value="start" disabled hidden>Sort By</option>
+                    <option value="id">Default</option>
                     <option value="nickname">Nickname</option>
                     <option value="email">Email</option>
                     <option value="ipAddress">IP address</option>
