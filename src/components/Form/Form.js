@@ -71,7 +71,7 @@ class Form extends React.Component {
     passUser(e) {
         e.preventDefault();
         if (this.state.formValid) {
-            this.props.callback({
+            this.props.getUser({
                 nickname: this.state.nickname,
                 email: this.state.email,
                 ipAddress: this.state.ipAddress
@@ -131,5 +131,5 @@ class Form extends React.Component {
 export default Form;
 
 Form.protoTypes = {
-    callback: PropTypes.func,
+    getUser: PropTypes.func,
 }

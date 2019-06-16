@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 class User extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
     }
 
     deleteUser() {
         if (window.confirm('Are you sure you want to delete this user?')) {
-            this.props.callback(this.props.id);
+            this.props.deleteUser(this.props.id);
         }
     }
 
@@ -28,5 +27,5 @@ class User extends React.Component {
 export default User;
 
 User.protoTypes = {
-    callback: PropTypes.func,
+    deleteUser: PropTypes.func,
 }

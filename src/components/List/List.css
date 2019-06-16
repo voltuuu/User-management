@@ -1,39 +1,39 @@
-.list {
+.list .list-inner {
   padding: 20px;
   border: 1px solid #E8E8E8;
   border-radius: 5px;
 }
 
-.list .list-table {
+.list .list-inner .list-table {
   width: 100%;
   border-spacing: 0;
 }
 
-.list .list-table .list-head {
+.list .list-inner .list-table .list-head {
   background: #E8E8E8;
 }
 
-.list .list-table .list-head tr th {
+.list .list-inner .list-table .list-head tr th {
   padding: 10px 20px;
   text-align: left;
 }
 
-.list .list-table .list-head tr th:first-child {
+.list .list-inner .list-table .list-head tr th:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.list .list-table .list-head tr th:last-child {
+.list .list-inner .list-table .list-head tr th:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.list .list-table .list-body tr td {
+.list .list-inner .list-table .list-body tr td {
   padding: 10px 20px;
   border-bottom: 1px solid #E8E8E8;
 }
 
-.list .list-table .list-body tr td .delete {
+.list .list-inner .list-table .list-body tr td .delete {
   background: #E8E8E8;
   color: #000;
   border-radius: 100%;
@@ -53,13 +53,38 @@
   transition: all 0.3s;
 }
 
-.list .list-table .list-body tr td .delete:focus, .list .list-table .list-body tr td .delete:visited {
+.list .list-inner .list-table .list-body tr td .delete:focus, .list .list-inner .list-table .list-body tr td .delete:visited {
   outline: none;
 }
 
-.list .list-table .list-body tr td .delete:hover {
+.list .list-inner .list-table .list-body tr td .delete:hover {
   background: #00cc99;
   border-color: #00cc99;
   color: #fff;
+}
+
+@media only screen and (max-width: 850px) {
+  .list .list-inner {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list .list-inner .list-table .list-head tr th, .list .list-inner .list-table .list-head tr td, .list .list-inner .list-table .list-body tr th, .list .list-inner .list-table .list-body tr td {
+    padding: 10px 5px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .list .list-inner .list-table .list-head tr th, .list .list-inner .list-table .list-head tr td, .list .list-inner .list-table .list-body tr th, .list .list-inner .list-table .list-body tr td {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .list .list-inner .list-table .list-head tr th, .list .list-inner .list-table .list-head tr td, .list .list-inner .list-table .list-body tr th, .list .list-inner .list-table .list-body tr td {
+    padding: 5px 0;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=List.css.map */

@@ -19,28 +19,38 @@ class List extends React.Component {
     }
 
     deleteUser(id) {
-        this.props.callback(id);
+        this.props.deleteUser(id);
+    }
+
+    deleteUsers(bool) {
+        this.props.deleteUsers(bool);
+    }
+
+    sortUsers(sortBy) {
+        this.props.sortUsers(sortBy);
     }
 
     render() {
         return (
             <div className="list">
-                <ListMenu/>
-                <table className="list-table">
-                    <thead className="list-head">
-                        <tr>
-                            <th>Nickname</th>
-                            <th>Email</th>
-                            <th>IP address</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody className="list-body">
-                        {this.state.users.map(user =>
-                            <User callback={this.deleteUser.bind(this)} key={user.id} id={user.id} user={user}/>
-                        )}
-                    </tbody>
-                </table>
+                <ListMenu deleteUsers={this.deleteUsers.bind(this)} sortUsers={this.sortUsers.bind(this)}/>
+                <div className="list-inner">
+                    <table className="list-table">
+                        <thead className="list-head">
+                            <tr>
+                                <th>Nickname</th>
+                                <th>Email</th>
+                                <th>IP address</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody className="list-body">
+                            {this.state.users.map(user =>
+                                <User deleteUser={this.deleteUser.bind(this)} key={user.id} id={user.id} user={user}/>
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }
@@ -49,5 +59,7 @@ export default List;
 
 List.protoTypes = {
     list: PropTypes.array,
-    callback: PropTypes.func
+    deleteUser: PropTypes.func,
+    deleteUsers: PropTypes.func,
+    sortUsers: PropTypes.func
 }

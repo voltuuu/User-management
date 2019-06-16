@@ -13,7 +13,12 @@ class Dashboard extends React.Component {
         this.state = {
             id: 1,
             user: '',
-            list: []
+            list: [
+                {id: 1, nickname: 'a', email: 'a@gmail.com', ipAddress: '123.123.123.123'},
+                {id: 2, nickname: 'b', email: 'b@gmail.com', ipAddress: '213.213.213.213'},
+                {id: 3, nickname: 'c', email: 'c@gmail.com', ipAddress: '321.321.321.321'},
+                {id: 4, nickname: 'test', email: 'test@gmail.com', ipAddress: '123.123.123.123'}
+            ]
         }
     }
 
@@ -56,6 +61,27 @@ class Dashboard extends React.Component {
         }
     }
 
+    deleteUsers(bool) {
+        if (bool) {
+            this.setState({
+                list: []
+            })
+        }
+    }
+
+    sortUsers(sortBy) {
+        if (sortBy != 'default') {
+            const list = this.state.list.sort(function(a, b){
+                if(a[sortBy] < b[sortBy]) { return -1; }
+                if(a[sortBy] > b[sortBy]) { return 1; }
+                return 0;
+            });
+            this.setState({
+                list: list
+            });
+        }
+    }
+
     render() {
         return (
             <Router>
@@ -63,8 +89,8 @@ class Dashboard extends React.Component {
                 <div className="app-inner">
                     <Switch>
                         <Route path="/" exact component={Home}/>
-                        <Route path="/add-user" exact component={() => <Form callback={this.getUser.bind(this)} />}/>
-                        <Route path="/user-list" exact component={() => <List callback={this.deleteUser.bind(this)} list={this.state.list} />}/>
+                        <Route path="/add-user" exact component={() => <Form getUser={this.getUser.bind(this)} />}/>
+                        <Route path="/user-list" exact component={() => <List sortUsers={this.sortUsers.bind(this)} deleteUsers={this.deleteUsers.bind(this)} deleteUser={this.deleteUser.bind(this)} list={this.state.list} />}/>
                     </Switch>
                 </div>
             </Router>

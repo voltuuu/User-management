@@ -37,4 +37,10 @@ html body #root .app {
   box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
   font-family: "Open Sans", sans-serif;
 }
+
+@media only screen and (max-width: 768px) {
+  html body #root .app {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=App.css.map */

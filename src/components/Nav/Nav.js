@@ -1,27 +1,25 @@
 import React from 'react';
 import './Nav.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-        }
     }
 
     render() {
         return (
             <nav className="menu">
                 <ul className="menu-links">
-                    <Link to="/">
+                    <NavLink to="/" exact activeClassName="active">
                         <li className="menu-link">Home</li>
-                    </Link>
-                    <Link to="/add-user">
+                    </NavLink>
+                    <NavLink to="/add-user" exact activeClassName="active">
                         <li className="menu-link">Add User</li>
-                    </Link>
-                    <Link to="/user-list">
+                    </NavLink>
+                    <NavLink to="/user-list" exact activeClassName="active">
                         <li className="menu-link">User list</li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </nav>
         );

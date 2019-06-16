@@ -32,7 +32,7 @@
   color: #00cc99;
 }
 
-.menu .menu-links a .active {
+.menu .menu-links .active .menu-link {
   background: #fff;
   color: #00cc99;
 }

@@ -16,6 +16,8 @@
         .form-group {
             position: relative;
             margin-bottom: 30px;
+            max-width: 300px;
+            width: 100%;
             .form-label {
                 position: absolute;
                 top: 0;
@@ -25,7 +27,6 @@
                 opacity: 0.5;
             }
             .form-input {
-                max-width: 300px;
                 width: 100%;
                 border-top: 0;
                 border-left: 0;
@@ -85,6 +86,29 @@
               background-color: #E8E8E8;
               color: #B0B0B0;
               cursor: not-allowed;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .form-holder {
+        .form-header {
+            text-align: center;
+            margin: 0 0 40px;
+        }
+        .form {
+            text-align: center;
+            .form-group {
+                margin: auto;
+                padding-bottom: 60px;
+                .form-error {
+                    top: auto;
+                    bottom: 25px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
             }
         }
     }
